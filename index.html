@@ -1,70 +1,71 @@
-<!-- ================================
-     SAFAH MART — PREMIUM OPENING
-================================= -->
+<section class="sm-hero">
 
-<section class="safah-premium">
+  <div class="sm-bg"></div>
 
-  <!-- Decorative Background -->
-  <div class="safah-glow glow-1"></div>
-  <div class="safah-glow glow-2"></div>
-
-  <!-- Floating Products -->
-  <div class="floating-products">
-    <div class="product-card p1">📚</div>
-    <div class="product-card p2">✏️</div>
-    <div class="product-card p3">⚽</div>
-    <div class="product-card p4">📓</div>
-    <div class="product-card p5">🕌</div>
-    <div class="product-card p6">🖊️</div>
+  <!-- Floating Product Showcase -->
+  <div class="sm-products">
+    <div class="sm-product one">📚</div>
+    <div class="sm-product two">✒️</div>
+    <div class="sm-product three">⚽</div>
+    <div class="sm-product four">📓</div>
+    <div class="sm-product five">🕌</div>
+    <div class="sm-product six">🖊️</div>
   </div>
 
-  <!-- Main Content -->
-  <div class="safah-content">
+  <div class="sm-main">
 
-    <div class="safah-tag">
-      ✦ QUALITY • TRUST • VALUE ✦
+    <div class="sm-badge">
+      ✦ WELCOME TO OUR STORE ✦
     </div>
 
     <h1>
-      Welcome to
-      <span>SAFAH MART</span>
+      SAFAH
+      <span>MART</span>
     </h1>
 
-    <p class="safah-line">
-      Your Trusted Online Shopping Destination
+    <div class="sm-line"></div>
+
+    <h2>
+      Everything You Need, All in One Place
+    </h2>
+
+    <p>
+      Books • Stationery • Sports Items • Attar • Miswak
+      <br>
+      এবং আপনার প্রয়োজনীয় আরও অনেক পণ্য।
     </p>
 
-    <p class="safah-text">
-      বই, খাতা, কলম, লাইব্রেরি সামগ্রী, খেলাধুলার পণ্য,
-      আতর, মিসওয়াক এবং প্রয়োজনীয় আরও অনেক পণ্য—
-      সবকিছু এখন এক জায়গায়।
-    </p>
+    <div class="sm-actions">
 
-    <div class="safah-buttons">
-
-      <a href="#products" class="safah-btn main">
-        🛒 Explore Products
+      <a href="#products" class="sm-btn shop">
+        🛒 Shop Now
       </a>
 
-      <a href="tel:01580844973" class="safah-btn">
-        ☎ Contact Us
+      <a href="tel:01580844973" class="sm-btn contact">
+        ☎ Contact
       </a>
 
     </div>
 
-    <div class="safah-contact">
+    <div class="sm-info">
 
-      <span>📞 01580844973</span>
+      <div>
+        <b>📞</b>
+        <span>01580844973</span>
+      </div>
 
-      <span>✉ masumbillahjc@gmail.com</span>
+      <div>
+        <b>✉</b>
+        <span>masumbillahjc@gmail.com</span>
+      </div>
 
     </div>
 
   </div>
 
-  <div class="safah-scroll">
-    <span>SCROLL TO EXPLORE</span>
-    <b>↓</b>
+  <div class="sm-bottom">
+    <span>SCROLL DOWN</span>
+    <strong>↓</strong>
   </div>
 
 </section>
@@ -72,381 +73,327 @@
 
 <style>
 
-/* =================================
-   SAFAH MART PREMIUM COMPONENT
-================================= */
+.sm-hero{
+  position:relative;
+  min-height:720px;
+  overflow:hidden;
 
-.safah-premium {
-  position: relative;
-  min-height: 720px;
-  width: 100%;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
   background:
-    radial-gradient(
-      circle at center,
-      #242424 0%,
-      #0d0d0d 45%,
-      #030303 100%
-    );
+  radial-gradient(circle at 50% 45%,#292929,#0b0b0b 55%,#000);
 
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  color:#fff;
+  font-family:Arial,sans-serif;
+}
+
+.sm-bg{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.85)
+  );
 }
 
 
-/* BACKGROUND GLOW */
+/* PRODUCTS */
 
-.safah-glow {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-
-  border-radius: 50%;
-
-  filter: blur(100px);
-
-  opacity: .18;
-
-  pointer-events: none;
+.sm-products{
+  position:absolute;
+  inset:0;
 }
 
-.glow-1 {
-  top: -180px;
-  left: -100px;
-  background: #ffffff;
+.sm-product{
+  position:absolute;
+
+  width:100px;
+  height:100px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:45px;
+
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:25px;
+
+  background:rgba(255,255,255,.07);
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+
+  animation:float 5s ease-in-out infinite;
 }
 
-.glow-2 {
-  bottom: -220px;
-  right: -100px;
-  background: #888;
-}
+.one{left:7%;top:18%}
+.two{left:17%;bottom:17%;animation-delay:1s}
+.three{right:7%;top:18%;animation-delay:1.5s}
+.four{right:17%;bottom:17%;animation-delay:2s}
+.five{left:4%;top:53%;animation-delay:2.5s}
+.six{right:4%;top:53%;animation-delay:3s}
 
+@keyframes float{
 
-/* FLOATING PRODUCTS */
-
-.floating-products {
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-}
-
-.product-card {
-  position: absolute;
-
-  width: 95px;
-  height: 95px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 45px;
-
-  border: 1px solid rgba(255,255,255,.15);
-
-  border-radius: 24px;
-
-  background: rgba(255,255,255,.06);
-
-  backdrop-filter: blur(15px);
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.5);
-
-  animation: safahFloat 6s ease-in-out infinite;
-}
-
-.p1 {
-  left: 8%;
-  top: 18%;
-}
-
-.p2 {
-  left: 18%;
-  bottom: 16%;
-  animation-delay: 1s;
-}
-
-.p3 {
-  right: 9%;
-  top: 17%;
-  animation-delay: 1.8s;
-}
-
-.p4 {
-  right: 18%;
-  bottom: 18%;
-  animation-delay: 2.5s;
-}
-
-.p5 {
-  left: 4%;
-  top: 55%;
-  animation-delay: 3s;
-}
-
-.p6 {
-  right: 4%;
-  top: 55%;
-  animation-delay: 3.7s;
-}
-
-
-@keyframes safahFloat {
-
-  0%,100% {
-    transform: translateY(0) rotate(0deg);
+  0%,100%{
+    transform:translateY(0) rotate(0);
   }
 
-  50% {
-    transform: translateY(-22px) rotate(5deg);
+  50%{
+    transform:translateY(-20px) rotate(5deg);
   }
 
 }
 
 
-/* MAIN CONTENT */
+/* CONTENT */
 
-.safah-content {
-  position: relative;
-  z-index: 5;
+.sm-main{
+  position:relative;
+  z-index:5;
 
-  width: min(850px, 90%);
+  text-align:center;
 
-  text-align: center;
+  width:min(850px,90%);
+}
+
+.sm-badge{
+
+  display:inline-block;
+
+  padding:10px 22px;
+
+  border-radius:50px;
+
+  border:1px solid rgba(255,255,255,.2);
+
+  background:rgba(255,255,255,.08);
+
+  backdrop-filter:blur(15px);
+
+  font-size:11px;
+
+  letter-spacing:3px;
+
+  margin-bottom:25px;
 }
 
 
-/* TAG */
+.sm-main h1{
 
-.safah-tag {
-  display: inline-block;
+  margin:0;
 
-  padding: 10px 22px;
+  font-size:clamp(65px,10vw,120px);
 
-  border-radius: 50px;
+  line-height:.8;
 
-  border: 1px solid rgba(255,255,255,.2);
+  font-weight:900;
 
-  background: rgba(255,255,255,.07);
+  letter-spacing:-5px;
 
-  backdrop-filter: blur(15px);
+}
 
-  font-size: 11px;
+.sm-main h1 span{
 
-  letter-spacing: 3px;
+  display:block;
 
-  color: #ddd;
+  margin-top:15px;
 
-  margin-bottom: 28px;
+  background:linear-gradient(
+    90deg,
+    #fff,
+    #999,
+    #fff
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
 }
 
 
-/* TITLE */
+.sm-line{
 
-.safah-content h1 {
-  margin: 0;
+  width:80px;
+  height:2px;
 
-  font-size: clamp(45px, 8vw, 90px);
+  background:#fff;
 
-  line-height: .95;
+  margin:30px auto 20px;
 
-  font-weight: 900;
-
-  letter-spacing: -4px;
-
-  text-shadow:
-    0 15px 40px rgba(0,0,0,.7);
-}
-
-.safah-content h1 span {
-  display: block;
-
-  margin-top: 15px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #fff,
-      #aaa,
-      #fff
-    );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  color: transparent;
+  opacity:.7;
 }
 
 
-/* SUBTITLE */
+.sm-main h2{
 
-.safah-line {
-  margin: 30px 0 12px;
+  margin:0 0 12px;
 
-  font-size: 18px;
+  font-size:19px;
 
-  font-weight: 600;
-
-  letter-spacing: 2px;
-
-  color: #eee;
+  letter-spacing:1px;
 }
 
 
-/* DESCRIPTION */
+.sm-main p{
 
-.safah-text {
-  max-width: 650px;
+  margin:0;
 
-  margin: auto;
+  color:rgba(255,255,255,.62);
 
-  color: rgba(255,255,255,.65);
+  line-height:1.8;
 
-  font-size: 15px;
-
-  line-height: 1.9;
+  font-size:14px;
 }
 
 
 /* BUTTONS */
 
-.safah-buttons {
+.sm-actions{
 
-  display: flex;
+  display:flex;
 
-  justify-content: center;
+  justify-content:center;
 
-  gap: 15px;
+  gap:14px;
 
-  flex-wrap: wrap;
+  margin-top:30px;
 
-  margin-top: 32px;
+  flex-wrap:wrap;
 }
 
 
-.safah-btn {
+.sm-btn{
 
-  display: inline-flex;
+  min-width:160px;
 
-  align-items: center;
+  padding:15px 25px;
 
-  justify-content: center;
+  border-radius:13px;
 
-  min-width: 170px;
+  text-decoration:none;
 
-  padding: 15px 25px;
+  font-weight:700;
 
-  border-radius: 13px;
+  font-size:14px;
 
-  text-decoration: none;
+  transition:.3s;
 
-  color: white;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  border: 1px solid rgba(255,255,255,.2);
-
-  background: rgba(255,255,255,.07);
-
-  backdrop-filter: blur(15px);
-
-  transition: .3s ease;
+  border:1px solid rgba(255,255,255,.2);
 }
 
 
-.safah-btn.main {
+.sm-btn.shop{
 
-  background: #fff;
+  background:#fff;
 
-  color: #111;
-
-  border-color: #fff;
-
+  color:#111;
 }
 
 
-.safah-btn:hover {
+.sm-btn.contact{
 
-  transform: translateY(-5px);
+  background:rgba(255,255,255,.07);
 
-  box-shadow:
-    0 15px 35px rgba(0,0,0,.5);
+  color:#fff;
+
+  backdrop-filter:blur(12px);
+}
+
+
+.sm-btn:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
 }
 
 
 /* CONTACT */
 
-.safah-contact {
+.sm-info{
 
-  display: flex;
+  display:flex;
 
-  justify-content: center;
+  justify-content:center;
 
-  flex-wrap: wrap;
+  gap:25px;
 
-  gap: 25px;
+  margin-top:25px;
 
-  margin-top: 28px;
+  flex-wrap:wrap;
 
-  color: rgba(255,255,255,.55);
+  color:rgba(255,255,255,.55);
 
-  font-size: 12px;
+  font-size:12px;
+}
+
+
+.sm-info div{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:7px;
+}
+
+.sm-info b{
+  color:#fff;
 }
 
 
 /* SCROLL */
 
-.safah-scroll {
+.sm-bottom{
 
-  position: absolute;
+  position:absolute;
 
-  bottom: 20px;
+  bottom:18px;
 
-  left: 50%;
+  left:50%;
 
-  transform: translateX(-50%);
+  transform:translateX(-50%);
 
-  z-index: 5;
+  text-align:center;
 
-  text-align: center;
+  color:rgba(255,255,255,.4);
 
-  color: rgba(255,255,255,.4);
+  font-size:9px;
 
-  font-size: 9px;
-
-  letter-spacing: 2px;
-}
-
-.safah-scroll b {
-
-  display: block;
-
-  margin-top: 5px;
-
-  font-size: 18px;
-
-  animation: scrollDown 1.5s infinite;
+  letter-spacing:2px;
 }
 
 
-@keyframes scrollDown {
+.sm-bottom strong{
 
-  0%,100% {
-    transform: translateY(0);
+  display:block;
+
+  font-size:20px;
+
+  margin-top:5px;
+
+  animation:down 1.5s infinite;
+}
+
+
+@keyframes down{
+
+  0%,100%{
+    transform:translateY(0);
   }
 
-  50% {
-    transform: translateY(8px);
+  50%{
+    transform:translateY(8px);
   }
 
 }
@@ -454,54 +401,43 @@
 
 /* MOBILE */
 
-@media(max-width:700px) {
+@media(max-width:700px){
 
-  .safah-premium {
-    min-height: 680px;
+  .sm-hero{
+    min-height:680px;
   }
 
-  .product-card {
-    width: 65px;
-    height: 65px;
-    font-size: 30px;
+  .sm-product{
+
+    width:62px;
+    height:62px;
+
+    font-size:28px;
+
+    border-radius:17px;
   }
 
-  .p1 {
-    left: 3%;
+  .five,.six{
+    display:none;
   }
 
-  .p2 {
-    left: 4%;
+  .sm-main h1{
+    font-size:65px;
+    letter-spacing:-3px;
   }
 
-  .p3 {
-    right: 3%;
+  .sm-main h2{
+    font-size:15px;
   }
 
-  .p4 {
-    right: 4%;
+  .sm-main p{
+    font-size:13px;
   }
 
-  .p5,
-  .p6 {
-    display: none;
-  }
-
-  .safah-content h1 {
-    letter-spacing: -2px;
-  }
-
-  .safah-line {
-    font-size: 14px;
-  }
-
-  .safah-text {
-    font-size: 13px;
-  }
-
-  .safah-contact {
-    flex-direction: column;
-    gap: 8px;
+  .sm-info{
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
   }
 
 }
